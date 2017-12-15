@@ -1,0 +1,107 @@
+html{
+    margin: 0;
+    padding: 0;
+}
+
+.animation{
+    height: 200px;
+    width: 200px;
+
+    line-height: 200px;
+    text-align: center;
+    font-size: 30px;
+
+    margin: 0 auto;
+
+    border: solid 2px saddlebrown;
+
+    background-color: goldenrod;
+    position: relative;
+}
+
+.animation1{
+    animation-name: myAnimation1;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+.animation2{
+    animation-name: myAnimation2;
+    animation-delay: 2s;
+    animation-duration: 5s;
+    animation-iteration-count: 2;
+}
+
+.animation3{
+    animation-name: myAnimation3;
+    animation-delay: 0s;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+@keyframes myAnimation1{
+    0%{
+        left: 0;
+        top: 0;
+    }
+
+    12.5%{
+        left: calc(50vw - 111px);
+        top: 0;
+    }
+
+    37.5%{
+        left: calc(50vw - 111px);
+        top: calc(100vh - 222px);
+    }
+
+    62.5%{
+        left: calc(-50vw + 111px);
+        top: calc(100vh - 222px);
+    }
+
+    87.5%{
+        left: calc(-50vw + 111px);
+        top: 0;
+    }
+
+    100%{
+        left: 0;
+        top: 0;
+    }
+}
+
+@keyframes myAnimation2{
+    0%{
+        left: 0;
+        top: 0;
+    }
+
+    10%{
+        top: -40px;
+        left: -50px;
+    }
+
+    33%{
+        top: -200px;
+        left: -50px;
+
+    }
+
+    100%{
+        top: -200px;
+        left: -100px;
+    }
+}
+
+@keyframes myAnimation3{
+    from{
+        transform: rotate(0deg);
+    }
+
+    to{
+        transform: rotate(360deg);
+    }
+}
